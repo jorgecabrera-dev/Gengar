@@ -1,6 +1,7 @@
 
-nacionalidad = input("Ingrese su nacionalidad")
+usuario = input("Ingrese su usuario: ")
 
-nacionalidad.lower
-
-print(nacionalidad)
+if usuario.lower() == "admin":
+    print("Acceso permitido")
+else:
+    print("Usuario incorrecto")

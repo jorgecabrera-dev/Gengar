@@ -12,7 +12,8 @@ pkm2 = 7
 
 # print(len(entrenador))
 
-print("El entrenador", entrenador, "tiene", pkm1, "pokemon")
-print("El entrenador", entrenador2, "tiene", pkm2, "pokemon")
-print(f"El entrenador {entrenador} tiene {pkm1} pokemon")
-print(f"El entrenador {entrenador2} tiene {pkm2} pokemon")
+# print("El entrenador", entrenador, "tiene", pkm1, "pokemon")
+# print("El entrenador", entrenador2, "tiene", pkm2, "pokemon")
+# print(f"El entrenador {entrenador} tiene {pkm1} pokemon")
+# print(f"El entrenador {entrenador2} tiene {pkm2} pokemon")
+
