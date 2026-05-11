@@ -71,6 +71,3 @@
 #         print(e)
 
 # print(f"Total a pagar: {total}")
-
-
-porc = int(input("Ingrese el porcentaje de rucos en su comuna: "))
