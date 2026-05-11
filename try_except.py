@@ -71,3 +71,5 @@
 #         print(e)
 
 # print(f"Total a pagar: {total}")
+
+
