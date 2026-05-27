@@ -44,7 +44,8 @@ while True:
     print("1. Agregar producto")
     print("2. Mostrar producto")
     print("3. Eliminar producto")
-    print("4. Salir")
+    print("4. Actualizar producto")
+    print("5. Salir")
     op = int(input("Seleccione una opción: "))
     match op:
         case 1:
@@ -57,6 +58,8 @@ while True:
         case 3:
             ("")
         case 4:
+            ("")
+        case 5:
             print("Gracias por su preferencia")
             break
         case _:
