@@ -68,15 +68,32 @@
 
 juguetes = ["yo-yo", "tetris"]
 
-def ingresar():
+def escribir():
     ingreso = input("Ingrese el nombre del juguete a agregar: ")
     juguetes.append(ingreso)
     print(f"{ingreso} añadido correctamente")
 
 def borrar():
-    eliminar = input("Ingrese el nombre del juguete que desea eliminar: ")
-    juguetes.remove(eliminar)
-    print(f"{eliminar} eliminado correctamente")
+    try:
+        eliminar = int(input("¿Cuál juguete desea eliminar?: "))
+        if eliminar >= 1 and eliminar <= len(juguetes):
+            eliminado = juguetes.pop[eliminar - 1]
+            print(f"{eliminado} eliminado correctamente")
+        else:
+            print("Número de juguete inválido")
+    except ValueError:
+        error()
+
+def actualizar():
+    try:
+        actualizado = int(input("¿Cuál juguete desea actualizar?: "))
+        if actualizado >= 1 and actualizado <= len(juguetes):
+            juguetes[actualizado - 1] = input("Ingrese el nuevo nombre: ")
+            print("Se ha actualizado correctamente")
+        else:
+            print("Número de juguete inválido")
+    except ValueError:
+        error()
 
 def mostrar():
     c = 1
@@ -84,24 +101,30 @@ def mostrar():
         print(f"{c}. {i}")
         c += 1
 
+def error():
+    print("Error. Solo puede ingresar números enteros")
+
 while True:
     try:
+        print("-" * 20)
         print("1. Agregar un juguete")
         print("2. Eliminar un juguete")
         print("3. Actualizar un juguete")
         print("4. Mostrar un juguete")
         print("5. Salir")
+        print("-" * 20)
         op = int(input("Seleccione una opción: "))
         match op:
             case 1:
-                ingresar()
+                escribir()
             case 2:
+                mostrar()
+                print("-" * 20)
                 borrar()
             case 3:
-                reemplazo = input("Ingrese el nombre del juguete que desea actualizar: ")
-                modificado = input("Ingrese el nombre del juguete nuevo: ")
-                juguetes[reemplazo] = modificado
-                print("Se ha actualizado correctamente")
+                mostrar()
+                print("-" * 20)
+                actualizar()
             case 4:
                 mostrar()
             case 5:
@@ -109,5 +132,5 @@ while True:
                 break
             case _:
                 print("Opción inválida")       
-    except:
-        print("Solo números enteros")
+    except ValueError:
+        error()
