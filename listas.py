@@ -52,3 +52,62 @@
 
 # print(matrix)
 # print(matrix[1][0])
+
+
+# colores = ["blanco", "negro", "purpura", "naranja"]
+
+# for i in colores:
+#     print(i)
+
+# agregar = input("Ingrese un color: ")
+# colores.append(agregar)
+
+# for i in colores:
+#     print(i)
+
+
+juguetes = ["yo-yo", "tetris"]
+
+def ingresar():
+    ingreso = input("Ingrese el nombre del juguete a agregar: ")
+    juguetes.append(ingreso)
+    print(f"{ingreso} añadido correctamente")
+
+def borrar():
+    eliminar = input("Ingrese el nombre del juguete que desea eliminar: ")
+    juguetes.remove(eliminar)
+    print(f"{eliminar} eliminado correctamente")
+
+def mostrar():
+    c = 1
+    for i in juguetes:
+        print(f"{c}. {i}")
+        c += 1
+
+while True:
+    try:
+        print("1. Agregar un juguete")
+        print("2. Eliminar un juguete")
+        print("3. Actualizar un juguete")
+        print("4. Mostrar un juguete")
+        print("5. Salir")
+        op = int(input("Seleccione una opción: "))
+        match op:
+            case 1:
+                ingresar()
+            case 2:
+                borrar()
+            case 3:
+                reemplazo = input("Ingrese el nombre del juguete que desea actualizar: ")
+                modificado = input("Ingrese el nombre del juguete nuevo: ")
+                juguetes[reemplazo] = modificado
+                print("Se ha actualizado correctamente")
+            case 4:
+                mostrar()
+            case 5:
+                print("Hasta pronto")
+                break
+            case _:
+                print("Opción inválida")       
+    except:
+        print("Solo números enteros")

@@ -38,30 +38,31 @@
 # Modificar el programa del carrito de compras 
 # para poder utilizarlo con listas
 
-productos = []
-while True:
+# productos = []
+# while True:
 
-    print("1. Agregar producto")
-    print("2. Mostrar producto")
-    print("3. Eliminar producto")
-    print("4. Actualizar producto")
-    print("5. Salir")
-    op = int(input("Seleccione una opción: "))
-    match op:
-        case 1:
-            nombre = input("Ingrese el nombre del producto: ")
-            precio = int(input("Ingrese el precio del producto: "))
-            nuevo_producto = {"nombre":nombre, "precio":precio}
-            productos.append(nuevo_producto)
-        case 2:
-            print(productos)
-        case 3:
-            ("")
-        case 4:
-            ("")
-        case 5:
-            print("Gracias por su preferencia")
-            break
-        case _:
-            print("Opción inválida")
+#     print("1. Agregar producto")
+#     print("2. Mostrar producto")
+#     print("3. Eliminar producto")
+#     print("4. Actualizar producto")
+#     print("5. Salir")
+#     op = int(input("Seleccione una opción: "))
+#     match op:
+#         case 1:
+#             nombre = input("Ingrese el nombre del producto: ")
+#             precio = int(input("Ingrese el precio del producto: "))
+#             nuevo_producto = {"nombre":nombre, "precio":precio}
+#             productos.append(nuevo_producto)
+#         case 2:
+#             print(productos)
+#         case 3:
+#             borrar = input("Ingrese el nombre del producto que desea eliminar: ")
+#             productos.remove(borrar)
+#         case 4:
+#             ("")
+#         case 5:
+#             print("Gracias por su preferencia")
+#             break
+#         case _:
+#             print("Opción inválida")
 
