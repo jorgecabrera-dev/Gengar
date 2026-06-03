@@ -68,6 +68,15 @@
 
 juguetes = ["yo-yo", "tetris"]
 
+def menu():
+    print("-" * 20)
+    print("1. Agregar un juguete")
+    print("2. Eliminar un juguete")
+    print("3. Actualizar un juguete")
+    print("4. Mostrar un juguete")
+    print("5. Salir")
+    print("-" * 20)
+    
 def escribir():
     ingreso = input("Ingrese el nombre del juguete a agregar: ")
     juguetes.append(ingreso)
@@ -89,7 +98,7 @@ def actualizar():
         actualizado = int(input("¿Cuál juguete desea actualizar?: "))
         if actualizado >= 1 and actualizado <= len(juguetes):
             juguetes[actualizado - 1] = input("Ingrese el nuevo nombre: ")
-            print("Se ha actualizado correctamente")
+            print("Actualizado correctamente")
         else:
             print("Número de juguete inválido")
     except ValueError:
@@ -106,13 +115,7 @@ def error():
 
 while True:
     try:
-        print("-" * 20)
-        print("1. Agregar un juguete")
-        print("2. Eliminar un juguete")
-        print("3. Actualizar un juguete")
-        print("4. Mostrar un juguete")
-        print("5. Salir")
-        print("-" * 20)
+        menu()
         op = int(input("Seleccione una opción: "))
         match op:
             case 1:
