@@ -5,7 +5,7 @@ def validar_lista_numeros(lista):
         for i in lista:
             try:
                 int(i)
-            except ValueError:
+            except:
                 return False
         return True        
         
