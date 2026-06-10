@@ -175,6 +175,7 @@ def escribir2():
     precio = int(input("Ingrese el precio: "))
     nuevoKey = list(productosDicc.keys())[-1]
     productosDicc[nuevoKey + 1] = {"nombre": nombre, "precio": precio}
+    print(f"{nombre} agregado correctamente.")
 
 def mostrar2():
     print("-" * 40)
