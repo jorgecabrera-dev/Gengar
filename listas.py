@@ -86,7 +86,7 @@ def borrar():
     try:
         eliminar = int(input("¿Cuál juguete desea eliminar?: "))
         if eliminar >= 1 and eliminar <= len(juguetes):
-            eliminado = juguetes.pop[eliminar - 1]
+            eliminado = juguetes.pop(eliminar - 1)
             print(f"{eliminado} eliminado correctamente")
         else:
             print("Número de juguete inválido")
